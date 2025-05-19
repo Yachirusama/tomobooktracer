@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tomo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    // Define resetView function globally before other scripts load
+    function resetView() {
+      console.log("Resetting view to home");
+      document.querySelector(".recommended-books-container").style.display = "block";
+      document.querySelector(".bestsellers-section").style.display = "block";
+      document.getElementById("search-results").style.display = "none";
+      document.getElementById("back-btn").style.display = "none";
+      document.getElementById("searchInput").value = "";
+      // Clear the current search query if it exists
+      if (window.currentSearchQuery !== undefined) {
+        window.currentSearchQuery = "";
+      }
+    }
+  </script>
+</head>
+<body class="dark-mode">
+  <header class="header">
+    <div class="header-content">
+      <div class="branding">
+        <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="outerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0a192f" />
+              <stop offset="100%" stop-color="#112240" />
+            </linearGradient>
+            <linearGradient id="innerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#112240" />
+              <stop offset="100%" stop-color="#1a365d" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="95" fill="url(#outerGradient)" stroke="#64ffda" stroke-width="3" />
+          <circle cx="100" cy="100" r="85" fill="url(#innerGradient)" stroke="#4a8bdf" stroke-width="2" />
+          <g transform="translate(40, 60)">
+            <rect x="10" y="50" width="100" height="18" rx="3" fill="#4a8bdf" stroke="#ffffff" stroke-width="1.5" />
+            <rect x="12" y="52" width="96" height="14" rx="2" fill="#5a9bd4" />
+            <rect x="20" y="32" width="80" height="18" rx="3" fill="#64ffda" stroke="#ffffff" stroke-width="1.5" />
+            <rect x="22" y="34" width="76" height="14" rx="2" fill="#7cffe7" />
+            <rect x="35" y="14" width="50" height="18" rx="3" fill="#f8ce0b" stroke="#ffffff" stroke-width="1.5" />
+            <rect x="37" y="16" width="46" height="14" rx="2" fill="#ffd93d" />
+            <path d="M65,12 L75,12 L75,32 L70,27 L65,32 Z" fill="#ff6b6b" stroke="#ffffff" stroke-width="1" />
+          </g>
+          <text x="100" y="140" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#ffff" stroke="none">TOMO</text>
+        </svg>
+      </div>
+      <div class="search-container">
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Search books..."/>
+          <button id="search-btn"><i class="fas fa-search"></i></button>
+          <button id="refresh-btn"><i class="fas fa-sync-alt"></i></button>
+          <button id="back-btn" style="display: none;" onclick="resetView(); return false;"><i class="fas fa-arrow-left"></i></button>
+        </div>
+      </div>
+      <div class="header-controls">
+        <button id="about-btn" class="icon-btn" onclick="location.href='aboutus.html'"><i class="fas fa-info-circle"></i> About Us</button>
+        <button id="theme-toggle" class="icon-btn"><i class="fas fa-sun"></i></button>
+      </div>
+    </div>
+  </header>
+  <main class="main-layout">
+    <section class="content">
+      <div class="recommended-books-container">
+        <h3>Recommended Books</h3>
+        <div id="recommendations" class="recommendation-section"></div>
+      </div>
+      <div class="bestsellers-section">
+        <h3>Top Bestsellers</h3>
+        <div class="genre-section" id="bestsellers">
+        </div>
+      </div>
+      <div id="search-results" class="search-results" style="display: none;"></div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div id="contact-section">
+        <p>&copy; 2025 Tomo by Smart Learn Technology. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
