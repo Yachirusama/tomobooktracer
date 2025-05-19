@@ -564,3 +564,74 @@ grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 gap: 12px;
 }
 }
+@media (max-width: 768px) {
+  .search-bar input,
+  .search-bar button {
+    font-size: 0.95rem;
+  }
+
+  .book-card,
+  .bestseller-card {
+    width: 130px;
+    height: auto;
+  }
+
+  .book-card img,
+  .bestseller-card img {
+    height: auto;
+  }
+
+  .book-card .book-info,
+  .bestseller-card .book-info {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+
+  .search-bar input {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .search-bar button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .header-controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-content {
+    padding: 10px;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .book-card,
+  .bestseller-card {
+    width: 110px;
+  }
+
+  .book-card h3,
+  .bestseller-card h3 {
+    font-size: 0.8rem;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #feedback-form button {
+    font-size: 1rem;
+  }
+}
