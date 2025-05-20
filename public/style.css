@@ -206,9 +206,21 @@ max-height: 2.4rem;
 overflow: hidden;
 text-overflow: ellipsis;
 }
+/* Updated rating styles */
 .book-card .rating {
 color: #f8ce0b;
 font-size: 0.8rem;
+display: flex;
+justify-content: center;
+gap: 2px;
+}
+.rating {
+color: #f8ce0b;
+font-size: 0.8rem;
+display: flex;
+justify-content: center;
+gap: 2px;
+margin-top: 5px;
 }
 .bestsellers-section {
 margin-top: 20px;
@@ -285,6 +297,13 @@ line-height: 1.2;
 max-height: 2.4rem;
 overflow: hidden;
 text-overflow: ellipsis;
+}
+/* Updated star icons styles */
+.star-icon {
+display: inline-block;
+color: #f8ce0b;
+font-size: 1rem;
+margin: 0 1px;
 }
 .book-card:hover,
 .bestseller-card:hover {
