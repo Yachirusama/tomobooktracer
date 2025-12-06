@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
-    // Define resetView function globally before other scripts load
+    
     function resetView() {
       console.log("Resetting view to home");
       document.querySelector(".recommended-books-container").style.display = "block";
@@ -15,7 +15,7 @@
       document.getElementById("search-results").style.display = "none";
       document.getElementById("back-btn").style.display = "none";
       document.getElementById("searchInput").value = "";
-      // Clear the current search query if it exists
+     
       if (window.currentSearchQuery !== undefined) {
         window.currentSearchQuery = "";
       }
@@ -88,4 +88,5 @@
   </footer>
   <script src="./script.js"></script>
 </body>
+
 </html>
